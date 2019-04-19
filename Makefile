@@ -17,7 +17,7 @@ clean:
 
 build/llvm.BUILT:
 	mkdir -p build/llvm
-	cd build/llvm; cmake -G "Unix Makefiles" \
+	cd build/llvm; cmake -G "Ninja" \
 		-DCMAKE_BUILD_TYPE=MinSizeRel \
 		-DCMAKE_INSTALL_PREFIX=$(PREFIX) \
 		-DLLVM_TARGETS_TO_BUILD=WebAssembly \
@@ -27,7 +27,7 @@ build/llvm.BUILT:
 		-DLLVM_ENABLE_PROJECTS="lld;clang" \
 		-DDEFAULT_SYSROOT=$(PREFIX)/share/sysroot \
 		$(LLVM_PROJ_DIR)/llvm
-	cd build/llvm; $(MAKE) -j 8 \
+	cd build/llvm; ninja -j 4 \
 		install-clang \
 		install-lld \
 		install-llc \
