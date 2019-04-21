@@ -1,5 +1,7 @@
 # WASI SDK
 
+[![Build Status](https://dev.azure.com/swiftwasm/wasi-sdk/_apis/build/status/swiftwasm.wasi-sdk?branchName=swiftwasm)](https://dev.azure.com/swiftwasm/wasi-sdk/_build/latest?definitionId=1&branchName=swiftwasm)
+
 ## Quick Start
 
 [Download SDK packages here.](https://github.com/CraneStation/wasi-sdk/releases)
