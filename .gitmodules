@@ -3,7 +3,7 @@
 	url = https://github.com/swiftwasm/llvm-project
 [submodule "src/wasi-libc"]
 	path = src/wasi-libc
-	url = https://github.com/swiftwasm/wasi-sysroot
+	url = https://github.com/CraneStation/wasi-libc
 [submodule "src/config"]
 	path = src/config
 	url = https://git.savannah.gnu.org/git/config.git

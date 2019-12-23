@@ -53,7 +53,9 @@ build/llvm.BUILT:
 
 build/wasi-libc.BUILT: build/llvm.BUILT
 	$(MAKE) -C $(ROOT_DIR)/src/wasi-libc \
+		WASM_CFLAGS="-O2 -DNDEBUG -U_REENTRANT" \
 		WASM_CC=$(PREFIX)/bin/clang \
+		THREAD_MODEL=posix \
 		SYSROOT=$(PREFIX)/share/wasi-sysroot
 	touch build/wasi-libc.BUILT
 
