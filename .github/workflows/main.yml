@@ -6,9 +6,8 @@ on:
   push:
     branches:
       - swiftwasm
+      - maxd/upstream-merge
   pull_request:
-    branches:
-      - swiftwasm
 
 jobs:
   build:
