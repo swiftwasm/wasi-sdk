@@ -18,8 +18,8 @@ jobs:
       fail-fast: false
       matrix:
         os:
-          - ubuntu-latest
-          - macos-latest
+          - ubuntu-18.04
+          - macos-10.15
 #           - windows-latest
     steps:
       - uses: actions/checkout@v1
