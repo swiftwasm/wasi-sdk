@@ -84,7 +84,6 @@ build/llvm.BUILT:
 
 build/wasi-libc.BUILT: build/llvm.BUILT
 	$(MAKE) -C $(ROOT_DIR)/src/wasi-libc \
-		WASM_CLFAGS="-DSWIFTWASM_ENABLE_PTHREAD"
 		WASM_CC=$(BUILD_PREFIX)/bin/clang \
 		SYSROOT=$(BUILD_PREFIX)/share/wasi-sysroot
 	touch build/wasi-libc.BUILT
