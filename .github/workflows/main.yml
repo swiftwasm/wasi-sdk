@@ -36,9 +36,9 @@ jobs:
       - name: Build
         run: make package
         shell: bash
-      - name: Run the testsuite
-        run: make check
-        if: matrix.os == 'ubuntu-18.04'
+#      - name: Run the testsuite
+#        run: make check
+#        if: matrix.os == 'ubuntu-18.04'
       - name: Upload artifacts
         uses: actions/upload-artifact@v1
         with:
