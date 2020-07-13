@@ -65,9 +65,6 @@ build/llvm.BUILT:
 		$(LLVM_PROJ_DIR)/llvm
 	DESTDIR=$(DESTDIR) ninja $(NINJA_FLAGS) -v -C build/llvm \
 		install-clang \
-		install-clang-format \
-		install-clang-tidy \
-		install-clang-apply-replacements \
 		install-lld \
 		install-llvm-ranlib \
 		install-llvm-strip \
