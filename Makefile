@@ -142,8 +142,8 @@ build/libcxx.BUILT: build/llvm.BUILT build/compiler-rt.BUILT build/wasi-libc.BUI
 	# Do the build.
 	mkdir -p build/libcxx
 	cd build/libcxx && cmake -G Ninja $(LIBCXX_CMAKE_FLAGS) \
-	    -DCMAKE_C_FLAGS="$(DEBUG_PREFIX_MAP)" \
-	    -DCMAKE_CXX_FLAGS="$(DEBUG_PREFIX_MAP)" \
+	    -DCMAKE_C_FLAGS="$(DEBUG_PREFIX_MAP) -DDSWIFTWASM_ENABLE_PTHREAD" \
+	    -DCMAKE_CXX_FLAGS="$(DEBUG_PREFIX_MAP) -DDSWIFTWASM_ENABLE_PTHREAD" \
 	    -DLIBCXX_LIBDIR_SUFFIX=$(ESCAPE_SLASH)/wasm32-wasi \
 	    $(LLVM_PROJ_DIR)/libcxx
 	ninja $(NINJA_FLAGS) -v -C build/libcxx
